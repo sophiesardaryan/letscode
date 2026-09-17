@@ -19,13 +19,13 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install pytest-html
-    pip install -r requirements.txt
+    python -m pip install -r letscodeit/requirements.txt
     pip install pytest pytest-azurepipelines allure-pytest
     npm install -g allure-commandline
   displayName: 'Install Dependencies'
 
 - script: |
-    pytest --alluredir=**/allure-results
+    PYTHONPATH=. pytest --alluredir=**/allure-results
   
   displayName: 'Run Tests'
 
