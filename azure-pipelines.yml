@@ -16,11 +16,11 @@ steps:
   displayName: 'Use Python $(python.version)'
 
 - script: |
-
     python -m pip install --upgrade pip
-    pip install pytest-html
-    pip install -r requirements.txt
-    pip install pytest pytest-azurepipelines allure-pytest
+    python -m pip install pytest-html
+    python -m pip install -r requirements.txt
+    python -m pip install pytest pytest-azurepipelines allure-pytest
+    python -m pip show selenium
     npm install -g allure-commandline
   displayName: 'Install Dependencies'
 
