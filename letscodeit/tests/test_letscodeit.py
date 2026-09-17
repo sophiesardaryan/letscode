@@ -1,5 +1,4 @@
 import config
-import pytest
 from pages.practice_page import PracticePage
 from pages.google_page import GooglePage
 from pages.sign_in_page import SignIn

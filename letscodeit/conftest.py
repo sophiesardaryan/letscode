@@ -4,6 +4,8 @@ import pytest
 import logging
 import os
 
+HEADLESS = True
+
 @pytest.fixture
 def get_browser():
     try:
@@ -15,7 +17,7 @@ def get_browser():
         # Open a visible browser window and maximize it
         # browser = webdriver.Chrome()
         # browser.maximize_window()
-        
+
         yield browser
     except Exception as e:
         logging.error(f'Failed to set up driver: {e}')
